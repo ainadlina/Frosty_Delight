@@ -1,0 +1,220 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff8f2;
+    color: #4a4a4a;
+}
+
+/* Container Section */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Section Headings */
+h2 {
+    font-size: 2.5rem;
+    color: #d30000;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Icon Section */
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.icon-box {
+    text-align: center;
+}
+.icon {
+    font-size: 4rem;
+    color: #ff9f43;
+}
+.icon-title {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #4a4a4a;
+}
+
+/* Highlight Section */
+.highlight {
+    color: #d30000;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+/* Why Choose Us Section */
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+ul li {
+    background: #ffe8e4;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 15px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+ul li span {
+    font-size: 1.5rem;
+    color: #ff6b6b;
+}
+
+/* CTA Button */
+.cta {
+    text-align: center;
+    margin-top: 30px;
+}
+.cta button {
+    background: linear-gradient(90deg, #ff6b6b, #ff9f43);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.cta button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #f50404, #ae0202);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cta button::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background-color: #ff6b6b;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.cta button:hover::after {
+    opacity: 1;
+    bottom: -10px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}
+
+/* Responsive Media Queries */
+@media only screen and (max-width: 1200px) {
+.container {
+padding: 15px;
+}
+h2 {
+font-size: 2rem;
+}
+.icons {
+gap: 20px;
+}
+.icon {
+font-size: 3.5rem;
+}
+.cta button {
+font-size: 1.2rem;
+}
+}
+
+@media only screen and (max-width: 992px) {
+.icons {
+flex-wrap: wrap;
+justify-content: space-around;
+}
+.icon-box {
+flex-basis: 45%;
+margin-bottom: 20px;
+}
+ul li {
+font-size: 0.9rem;
+padding: 12px;
+}
+.cta button {
+width: 100%;
+}
+}
+
+@media only screen and (max-width: 768px) {
+h2 {
+font-size: 1.8rem;
+}
+p {
+font-size: 1rem;
+}
+.cta button {
+font-size: 1.1rem;
+padding: 12px 25px;
+}
+.icons {
+flex-direction: column;
+gap: 15px;
+}
+.icon {
+font-size: 3rem;
+}
+ul li {
+font-size: 0.9rem;
+padding: 12px;
+}
+}
+
+@media only screen and (max-width: 576px) {
+h2 {
+font-size: 1.6rem;
+}
+p {
+font-size: 0.9rem;
+}
+.cta button {
+font-size: 1rem;
+padding: 10px 20px;
+}
+.icons {
+gap: 10px;
+}
+.icon {
+font-size: 2.5rem;
+}
+ul li {
+font-size: 0.8rem;
+padding: 10px;
+}
+}

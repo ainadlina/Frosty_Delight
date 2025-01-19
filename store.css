@@ -1,0 +1,322 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff8f2;
+    color: #4a4a4a;
+}
+
+ /* Navbar Styling */
+ #navbar {
+    position: sticky;
+    top: 0; /* Sticks to the top of the page */
+    z-index: 1000; /* Ensures it stays above other elements */
+    display: flex;
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center;
+    background-color: #f40000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#navbar .logo {
+  margin-right: 20px;
+}
+
+
+#navbar .logo h1 {
+  font-size: 24px;
+  color: #ffffff;
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Adds space between links */
+  margin: 0;
+  padding: 0;
+}
+
+#navbar .nav-links li {
+  display: inline-block;
+  background-color: #f40000;
+}
+
+#navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+
+#navbar .nav-links a:hover {
+  color: #ecf0f1;
+  transform: translateY(-5px);
+
+}
+
+/* Store Locations Section */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #d30000;
+    margin-bottom: 30px;
+}
+
+/* Search bar section */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: block;
+    width: 300px;
+    padding: 6px 12px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.search-btn {
+    background-color: #d30000;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+}
+
+.search-btn:hover {
+    background-color: #a50000;
+}
+
+.store {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.store img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.store-info {
+    flex: 1;
+}
+
+.store-info h3 {
+    font-size: 1.8rem;
+    color: #4a4a4a;
+}
+
+.store-info p {
+    font-size: 1.1rem;
+    color: #777;
+    margin: 5px 0;
+}
+
+.store-info .hours {
+    font-size: 1rem;
+    color: #7e7d7d;
+}
+
+.store-info .address {
+    font-size: 1.1rem;
+    color: #4a4a4a;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}
+
+@media only screen and (max-width: 1200px) {
+    .store {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .store img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .store-info h3 {
+        font-size: 1.6rem;
+    }
+
+    .store-info p {
+        font-size: 1rem;
+    }
+
+    .store-info .hours, .store-info .address {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar {
+        width: 250px;
+        margin-bottom: 10px;
+    }
+
+    .search-btn {
+        padding: 10px 15px;
+    }
+
+    .store {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .store img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 15px;
+    }
+
+    .store-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .store-info p {
+        font-size: 1rem;
+    }
+
+    .store-info .hours, .store-info .address {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .store {
+        padding: 15px;
+    }
+
+    .store img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .store-info h3 {
+        font-size: 1.4rem;
+    }
+
+    .store-info p {
+        font-size: 1rem;
+    }
+
+    .store-info .hours, .store-info .address {
+        font-size: 0.9rem;
+    }
+
+    .search-bar {
+        width: 220px;
+    }
+
+    .search-btn {
+        padding: 8px 10px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar {
+        width: 200px;
+    }
+
+    .search-btn {
+        padding: 8px 10px;
+    }
+
+    .store {
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .store img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+
+    .store-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .store-info p {
+        font-size: 0.9rem;
+    }
+
+    .store-info .hours, .store-info .address {
+        font-size: 0.8rem;
+    }
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}

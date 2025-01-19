@@ -1,0 +1,99 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Login Container */
+  .login-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 300px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #e74c3c;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+  
+  /* Role Selection Buttons */
+  .role-buttons button {
+    background-color: #e74c3c;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 120px;
+    transition: background-color 0.3s;
+  }
+  
+  .role-buttons button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Toggle Buttons */
+  .toggle-container {
+    margin-bottom: 20px;
+  }
+  
+  .toggle-container button {
+    background-color: #e74c3c;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 120px;
+    transition: background-color 0.3s;
+    margin: 0 10px;
+  }
+  
+  .toggle-container button.active {
+    background-color: #c0392b;
+  }
+  
+  .toggle-container button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Form Styling */
+  .form input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .form button {
+    padding: 12px 20px;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .form button:hover {
+    background-color: #c0392b;
+  }
+  

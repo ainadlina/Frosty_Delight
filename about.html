@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Frosty Delight</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #4a4a4a;
+        }
+
+        /* Navbar Styling */
+#navbar {
+    position: sticky;
+    top: 0; /* Sticks to the top of the page */
+    z-index: 1000; /* Ensures it stays above other elements */
+    display: flex;
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center;
+    background-color: #f40000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#navbar .logo {
+  margin-right: 20px;
+}
+
+
+#navbar .logo h1 {
+  font-size: 24px;
+  color: #ffffff;
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Adds space between links */
+  margin: 0;
+  padding: 0;
+}
+
+#navbar .nav-links li {
+  display: inline-block;
+  background-color: #f40000;
+}
+
+#navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+
+#navbar .nav-links a:hover {
+  color: #ecf0f1;
+  transform: translateY(-5px);
+
+}
+
+        /* Container Section */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Section Headings */
+        h2 {
+            font-size: 2.5rem;
+            color: #d30000;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Icon Section */
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .icon-box {
+            text-align: center;
+        }
+        .icon {
+            font-size: 4rem;
+            color: #ff9f43;
+        }
+        .icon-title {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #4a4a4a;
+        }
+
+        /* Highlight Section */
+        .highlight {
+            color: #d30000;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-weight: bold;
+        }
+
+        /* Why Choose Us Section */
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        ul li {
+            background: #ffe8e4;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 15px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        ul li span {
+            font-size: 1.5rem;
+            color: #ff6b6b;
+        }
+
+        /* CTA Button */
+        .cta {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .cta a {
+            background: linear-gradient(90deg, #ff6b6b, #ff9f43);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.4rem;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: all 0.4s ease;
+            text-decoration: none;
+        }
+
+        .cta a:hover {
+            transform: scale(1.1);
+            background: linear-gradient(90deg, #f50404, #ae0202);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 3px;
+            background-color: #ff6b6b;
+            opacity: 0;
+            transition: all 0.3s ease;
+            
+            
+        }
+
+        .cta a:hover::after {
+            opacity: 1;
+            bottom: -10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header id="navbar">
+        <div class="logo">
+          <h1>Frosty Delights</h1>
+        </div>
+        <nav>
+          <div class="hamburger-menu" id="hamburger-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="store.html">Stores</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </nav>
+      </header>
+
+<div class="container">
+    <h2>🍦 Who We Are</h2>
+    <p>
+        <span class="highlight">Frosty Delight</span> is the result of four friends who shared a love for ice cream and great conversations. 
+        What started as a small idea during their weekend hangouts turned into a mission to bring happiness to others 
+        through scoops of ice cream and refreshing drinks. Together, they built Frosty Delight as a space for joy, flavor, and memories.
+    </p>
+
+    <div class="icons">
+        <div class="icon-box">
+            <span class="icon">🍨</span>
+            <p class="icon-title">Handcrafted Flavors</p>
+        </div>
+        <div class="icon-box">
+            <span class="icon">🥤</span>
+            <p class="icon-title">Refreshing Beverages</p>
+        </div>
+        <div class="icon-box">
+            <span class="icon">🌈</span>
+            <p class="icon-title">Happiness Guaranteed</p>
+        </div>
+    </div>
+    <h2>🌈 What We Offer</h2>
+    <p>
+        Our menu is a colorful blend of creamy, dreamy ice creams and thirst-quenching drinks. 
+        From classic vanilla to bold and exciting flavor mashups, we have something for every sweet tooth. 
+        Pair it with one of our fizzy or fruity beverages for the ultimate Frosty Delight experience.
+    </p>
+
+    <h2>✨ Our Mission</h2>
+    <p>
+        We’re on a mission to spread happiness and sweetness, one scoop and sip at a time. 
+        Every flavor is a story, and every smile we see reminds us why we do what we do. 
+        We aim to create a community that celebrates joy, creativity, and togetherness.
+    </p>
+
+    <h2>🌟 Why Choose Us?</h2>
+    <ul>
+        <li><span>✔</span> Unique handcrafted flavors made with love.</li>
+        <li><span>✔</span> Eco-friendly packaging for guilt-free indulgence.</li>
+        <li><span>✔</span> A menu filled with creativity and endless options.</li>
+        <li><span>✔</span> A joyful, welcoming space for everyone.</li>
+    </ul>
+
+    <h2>💬 Our Story</h2>
+    <p>
+        Once upon a time, four friends sat around a table, sharing their favorite ice cream flavors and dreaming big. 
+        They realized that their shared love for all things sweet and refreshing could become something extraordinary. 
+        With a dash of creativity and a sprinkle of determination, Frosty Delight was born. Today, it&apos;s not just a shop – 
+        it&apos;s a celebration of friendship, flavor, and fun.
+    </p>
+
+    <h2>🎉 Join the Frosty Family</h2>
+    <p>
+        Frosty Delight isn&apos;t just about ice cream; it&apos;s about creating memories, one scoop at a time. Whether you&apos;re here to satisfy your sweet tooth, 
+        grab a refreshing drink, or simply relax with friends, we&apos;re thrilled to have you.
+    </p>
+
+    <div class="cta">
+        <a href="menu.html" class="cta button">Order Now</a>
+    </div>
+    
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Frosty Delight. All rights reserved.</p>
+   <p>Follow us: Facebook | Instagram | Twitter</p>
+
+ 
+<script>
+
+    const hamburgerMenu = document.getElementById("hamburger-menu");
+    const navLinks = document.getElementById("nav-links");
+    
+
+    hamburgerMenu.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+    </script>
+
+</body>
+</html>

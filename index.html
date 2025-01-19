@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frosty Delights</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    /* Header */
+    header {
+      background: #f40000;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    header nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: #ffe8e8;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(135deg, #f40000, #f40000);
+      color: #fff;
+      padding: 3rem;
+      text-align: center;
+    }
+
+    .hero-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-section p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-buttons a {
+      background: #fff;
+      color: #ff6b81;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 0.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    .hero-buttons a:hover {
+      background: #ffe8e8;
+      transform: scale(1.05);
+    }
+
+    /* Popup Styles */
+    .popup-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .popup-form {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      width: 350px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+      position: relative;
+      text-align: center;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .popup-form h2 {
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    .popup-form p {
+      margin-bottom: 1.5rem;
+      color: #666;
+    }
+
+    .popup-form button {
+      background: linear-gradient(to right, #ff6b81, #ff9f87);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .popup-form button:hover {
+      transform: scale(1.05);
+    }
+
+    .popup-form .close-popup {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #ff6b81;
+      cursor: pointer;
+    }
+
+    /* Floating Labels */
+    .input-group {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 0.8rem 0.5rem;
+      font-size: 1rem;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .input-group input:focus {
+      border-color: #ff6b81;
+    }
+
+    .input-group label {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      font-size: 1rem;
+      color: #999;
+      transition: 0.3s ease;
+    }
+
+    .input-group input:focus + label,
+    .input-group input:not(:placeholder-shown) + label {
+      top: -10px;
+      font-size: 0.8rem;
+      color: #ff6b81;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header id="navbar">
+    <div class="logo">
+      <h1>Frosty Delights</h1>
+    </div>
+    <nav>
+      <div class="hamburger-menu" id="hamburger-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="store.html">Stores</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="#" id="login-btn">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h2>Welcome to Frosty Delights!</h2>
+      <p>Experience the best frozen treats in town!</p>
+      <div class="hero-buttons">
+        <a href="menu.html" class="interactive-btn">Order Now</a>
+        <a href="about.html" class="interactive-btn">Read More</a>
+      </div>
+    </div>
+    <div class="hero-images">
+      <img src="image/Strawberry.png" alt="Ice Cream 1" class="hero-img">
+      <img src="image/chocolate.png" alt="Ice Cream 1" class="hero-img">
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section id="menu">
+    <h3>Best Sellers</h3>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="image/Strawberry.png" alt="Strawberry Sundae">
+        <h1>Strawberry Sundae</h1>
+        <p>RM4.90</p>
+      </div>
+      <div class="product-card">
+        <img src="image/chocolate.png" alt="Chocolate Sundae">
+        <h1>Chocolate Sundae</h1>
+        <p>RM4.90</p>
+      </div>
+      <div class="product-card">
+        <img src="image/caramelicecream.png" alt="Caramel Sundae">
+        <h1>Caramel Sundae</h1>
+        <p>RM4.90</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Frosty Delight. All rights reserved.</p>
+    <p>Follow us: Facebook | Instagram | Twitter</p>
+  </footer>
+
+  <!-- Popup Form -->
+  <div class="popup-container" id="popup-container">
+    <div class="popup-form">
+      <button class="close-popup" id="close-popup">&times;</button>
+      <h2>Welcome!</h2>
+      <p>Would you like to:</p>
+      <button id="signup-btn">Sign Up</button>
+      <button id="login-options-btn">Log In</button>
+    </div>
+  </div>
+
+  <!-- Admin/Customer Options -->
+  <div class="popup-container" id="login-options-container">
+    <div class="popup-form">
+      <button class="close-popup" id="close-login-options">&times;</button>
+      <h2>Log In</h2>
+      <p>Choose your role:</p>
+      <button id="admin-login">Admin</button>
+      <button id="customer-login">Customer</button>
+    </div>
+  </div>
+
+  <!-- Sign Up Form -->
+<div class="popup-container" id="signup-container">
+  <div class="popup-form interactive-form">
+    <button class="close-popup" id="close-signup">&times;</button>
+    <h2>Join Us</h2>
+    <p>Create your account to enjoy our frosty delights!</p>
+    <form id="signup-form">
+      <div class="input-group">
+        <input type="text" id="signup-name" required>
+        <label for="signup-name">Full Name</label>
+      </div>
+      <div class="input-group">
+        <input type="email" id="signup-email" required>
+        <label for="signup-email">Email Address</label>
+      </div>
+      <div class="input-group">
+        <input type="password" id="signup-password" required>
+        <label for="signup-password">Password</label>
+      </div>
+      <button type="submit" class="form-btn">Sign Up</button>
+    </form>
+  </div>
+</div>
+
+<!-- Login Form -->
+<div class="popup-container" id="login-form-container">
+  <div class="popup-form interactive-form">
+    <button class="close-popup" id="close-login-form">&times;</button>
+    <h2>Welcome Back!</h2>
+    <p>Log in to continue enjoying our treats.</p>
+    <form id="login-form">
+      <div class="input-group">
+        <input type="email" id="login-email" required>
+        <label for="login-email">Email Address</label>
+      </div>
+      <div class="input-group">
+        <input type="password" id="login-password" required>
+        <label for="login-password">Password</label>
+      </div>
+      <button type="submit" class="form-btn">Log In</button>
+    </form>
+  </div>
+</div>
+
+
+  <script>
+    const hamburgerMenu = document.getElementById("hamburger-menu");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburgerMenu.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    // Popup functionality
+    const loginBtn = document.getElementById("login-btn");
+    const popupContainer = document.getElementById("popup-container");
+    const closePopup = document.getElementById("close-popup");
+    const loginOptionsContainer = document.getElementById("login-options-container");
+    const closeLoginOptions = document.getElementById("close-login-options");
+    const loginOptionsBtn = document.getElementById("login-options-btn");
+
+    // Show the initial popup
+    loginBtn.addEventListener("click", () => {
+      popupContainer.style.display = "flex";
+    });
+
+    // Close the initial popup
+    closePopup.addEventListener("click", () => {
+      popupContainer.style.display = "none";
+    });
+
+    // Show login options popup
+    loginOptionsBtn.addEventListener("click", () => {
+      popupContainer.style.display = "none";
+      loginOptionsContainer.style.display = "flex";
+    });
+
+    // Close login options popup
+    closeLoginOptions.addEventListener("click", () => {
+      loginOptionsContainer.style.display = "none";
+    });
+
+    // Get all necessary elements
+const signupBtn = document.getElementById("signup-btn");
+const signupContainer = document.getElementById("signup-container");
+const closeSignup = document.getElementById("close-signup");
+
+const loginFormContainer = document.getElementById("login-form-container");
+const closeLoginForm = document.getElementById("close-login-form");
+const adminLogin = document.getElementById("admin-login");
+const customerLogin = document.getElementById("customer-login");
+
+// Show signup form with animation
+signupBtn.addEventListener("click", () => {
+  popupContainer.style.display = "none";
+  signupContainer.style.display = "flex";
+  signupContainer.querySelector(".popup-form").classList.add("fade-in");
+});
+
+// Show login form with animation
+adminLogin.addEventListener("click", () => {
+  loginOptionsContainer.style.display = "none";
+  loginFormContainer.style.display = "flex";
+  loginFormContainer.querySelector(".popup-form").classList.add("fade-in");
+});
+
+customerLogin.addEventListener("click", () => {
+  loginOptionsContainer.style.display = "none";
+  loginFormContainer.style.display = "flex";
+  loginFormContainer.querySelector(".popup-form").classList.add("fade-in");
+});
+
+// Close signup form
+closeSignup.addEventListener("click", () => {
+  signupContainer.style.display = "none";
+});
+
+// Close login form
+closeLoginForm.addEventListener("click", () => {
+  loginFormContainer.style.display = "none";
+});
+
+
+  </script>
+</body>
+</html>
